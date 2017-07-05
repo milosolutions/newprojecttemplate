@@ -35,3 +35,7 @@ Other subprojects can add more goodies to this template. Please check out https:
 # 3rd party libraries # {#third-party}
 
 * [create-dmg](https://github.com/andreyvit/create-dmg) - A shell script to build fancy DMGs. MIT License.
+
+# License # {#license}
+
+This project is licensed under the MIT License - see the LICENSE-MiloCodeDB.txt file for details
