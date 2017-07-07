@@ -1,7 +1,9 @@
 INCLUDEPATH += $$PWD
 
 win32 {
-   RC_FILE = $$PWD/template.rc
+exists($$PWD/default.rc) {
+   RC_FILE = $$PWD/default.rc
+}
 }
 
 
