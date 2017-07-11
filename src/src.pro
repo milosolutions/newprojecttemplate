@@ -5,9 +5,6 @@
 
 QT = core
 
-## Set up application version
-VERSION=0.0.1
-
 ## Add version define. You can now use this in C++ code:
 ##  QString someString(APP_VERSION);
 DEFINES+= APP_VERSION=\\\"$$VERSION\\\"
