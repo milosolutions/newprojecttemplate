@@ -5,10 +5,6 @@
 
 QT = core
 
-## Add version define. You can now use this in C++ code:
-##  QString someString(APP_VERSION);
-DEFINES+= APP_VERSION=\\\"$$VERSION\\\"
-
 # Warning! QStringBuilder can crash your app! See last point here:
 # https://www.kdab.com/uncovering-32-qt-best-practices-compile-time-clazy/
 # !!!
@@ -19,7 +15,9 @@ TEMPLATE = app
 CONFIG += c++14
 TARGET = Template
 
-SOURCES += main.cpp
+HEADERS += globals.h
+
+SOURCES += main.cpp 
 
 OTHER_FILES += \
     bumpVersion.sh \

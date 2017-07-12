@@ -27,4 +27,3 @@ Thumbs.db
 *.kate-swp
 *.doxytag
 doc/html/
-version.cpp

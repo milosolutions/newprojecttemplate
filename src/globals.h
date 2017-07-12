@@ -21,38 +21,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 *******************************************************************************/
 
+#ifndef GLOBALS_H
+#define GLOBALS_H
 
-/*
-  TEMPLATE main.cpp by Milo Solutions. Copyright 2016
-*/
+#ifdef VERSION
+  #include "version.h"
+#else
+  #define APP_VERSION ""
+  #define GIT_COMMIT_ID ""
+#endif
 
-#include <QCoreApplication>
-#include <QLoggingCategory>
-
-#include "globals.h"
-
-// Prepare logging categories. Modify these to your needs
-//Q_DECLARE_LOGGING_CATEGORY(core) // already declared in MiloLog header
-Q_LOGGING_CATEGORY(coreMain, "core.main")
-
-/*!
-  Main routine. Remember to update the application name and initialise logger
-  class, if present.
-  */
-int main(int argc, char *argv[]) {
-    //MiloLog::instance();
-    // Set up basic application data. Modify this to your needs
-    QCoreApplication app(argc, argv);
-    app.setApplicationVersion(APP_VERSION);
-    app.setOrganizationName("Milo Solutions");
-    app.setOrganizationDomain("milosolutions.com");
-    app.setApplicationName("Template");
-    //logger()->enableLogToFile(app.applicationName());
-    qCInfo(coreMain) << "Application data set."
-                 << "\n\tName:" << app.applicationName()
-                 << "\n\tOrganisation:" << app.organizationName()
-                 << "\n\tDomain:" << app.organizationDomain()
-                 << "\n\tVersion:" << app.applicationVersion();
-    
-    return app.exec();
-}
+#endif // GLOBALS_H
