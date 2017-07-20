@@ -41,7 +41,7 @@ Add test case
 To add a new test case, see example implementation in miloconf submodule. In short, you need to:
 
 1. Create a new subdir in testModuleName/ directory.
-2. Copy .pro file from miloconfig/tst_miloconfig to your new subdir.
+2. Copy .pro file from mconfig/tst_mconfig to your new subdir.
 3. Update paths and file names. Make sure ```QT += gui``` is there!
 4. Add tst_classname.cpp test case file.
 5. Write your tests :-) Remember, you need to cover the base class as good as possible - test basic
