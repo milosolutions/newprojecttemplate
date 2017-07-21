@@ -21,8 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 *******************************************************************************/
 
-#ifndef GLOBALS_H
-#define GLOBALS_H
+#pragma once
 
 #ifdef VERSION
   #include "version.h"
@@ -30,5 +29,3 @@ SOFTWARE.
   #define APP_VERSION ""
   #define GIT_COMMIT_ID ""
 #endif
-
-#endif // GLOBALS_H

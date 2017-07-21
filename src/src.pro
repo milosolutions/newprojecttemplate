@@ -20,7 +20,6 @@ HEADERS += globals.h
 SOURCES += main.cpp 
 
 OTHER_FILES += \
-    bumpVersion.sh \
     template.doxyfile \
     README.md \
     Release.md \
