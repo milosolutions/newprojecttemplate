@@ -52,7 +52,8 @@ int main(int argc, char *argv[]) {
                  << "\n\tName:" << app.applicationName()
                  << "\n\tOrganisation:" << app.organizationName()
                  << "\n\tDomain:" << app.organizationDomain()
-                 << "\n\tVersion:" << app.applicationVersion();
-    
+                 << "\n\tVersion:" << app.applicationVersion()
+                 << "\n\tSHA:" << GIT_COMMIT_ID;
+
     return app.exec();
 }
