@@ -4,6 +4,7 @@ TEMPLATE = subdirs
 
 # Add new test cases here:
 SUBDIRS += \
+    tst_project
 
 
 # Please use convenience includes:
