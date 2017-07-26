@@ -32,7 +32,7 @@ SOFTWARE.
 #include "globals.h"
 
 // Prepare logging categories. Modify these to your needs
-//Q_DECLARE_LOGGING_CATEGORY(core) // already declared in MiloLog header
+//Q_DECLARE_LOGGING_CATEGORY(core) // already declared in MLog header
 Q_LOGGING_CATEGORY(coreMain, "core.main")
 
 /*!

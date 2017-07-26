@@ -20,11 +20,11 @@ HEADERS += globals.h
 SOURCES += main.cpp 
 
 OTHER_FILES += \
-    template.doxyfile \
-    README.md \
-    Release.md \
-    .gitignore \
-    license-Qt.txt
+    ../template.doxyfile \
+    ../README.md \
+    ../Release.md \
+    ../.gitignore \
+    ../license-Qt.txt
 
 ## Put all build files into build directory
 ##  This also works with shadow building, so don't worry!

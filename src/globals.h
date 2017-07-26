@@ -23,9 +23,14 @@ SOFTWARE.
 
 #pragma once
 
-#ifdef VERSION
-  #include "version.h"
+// Including version sources (MScripts)
+#ifdef VERSION_LIB
+    #include "version.h"
+    #ifdef VERSION_GIT
+        #include "versiongit.cpp"
+    #else
+        const QByteArray GIT_COMMIT_ID;
+    #endif
 #else
-  #define APP_VERSION ""
-  #define GIT_COMMIT_ID ""
+    const QByteArray APP_VERSION = QByteArray("0.0.1");
 #endif
