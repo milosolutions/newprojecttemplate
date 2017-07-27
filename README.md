@@ -1,12 +1,17 @@
 \anchor milodatabasenpl
-
 [TOC]
 
 Milo Code DB main ([online](https://qtdocs.milosolutions.com/milo-code-db/main/) | [offline](\ref milodatabasemain))
 
-# Using this template # {#using}
+# Using this template
 
 Minimal Qt version is Qt 5.5. Recommended: newest available
+
+## Installer
+
+If you are installing template using Installer then you just open PROJECT_NAME.pro file and start working!
+
+## Starting from template
 
 In order to use this project template in your new project, please do the following:
 0. Follow this: https://wiki.milosolutions.com/index.php/Development_tutorial,
@@ -15,7 +20,6 @@ In order to use this project template in your new project, please do the followi
 2. Search for all occurences ofthe word "template" (case insensitive search)
    and replace them with the name of your project. Also, change the name of
    template.pro and template.doxyfile to match the new project name.
-3. Read through bumpVersion.sh file and adjust it to your needs.
 4. Read through template.pro file and adjust it to your needs.
 5. Remove this message and put in real info about the project in README.md file.
 6. Fill Release.md file with information about how to build and release a package
@@ -24,18 +28,18 @@ In order to use this project template in your new project, please do the followi
 8. Create a wiki and maintain it.
 9. Ensure all newly added code is properly commented.
 
-## Optional items: ## {#optional}
+## Optional items:
 
-1. Add CI to your project (see build scripts repository in Milo Code Database).
+1. Add CI to your project (see MScripts repository in Milo Code Database).
 
-## Milo Code Database: ## {#milo-code-database}
+## Milo Code Database: 
 
 Other subprojects can add more goodies to this template. Please check out https://wiki.milosolutions.com/index.php/Milo_Code_DB
 
-# 3rd party libraries # {#third-party}
+# 3rd party libraries 
 
 * [create-dmg](https://github.com/andreyvit/create-dmg) - A shell script to build fancy DMGs. MIT License.
 
-# License # {#license}
+# License 
 
 This project is licensed under the MIT License - see the LICENSE-MiloCodeDB.txt file for details

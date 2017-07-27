@@ -16,6 +16,8 @@ INPUT = bumpVersion.sh license-Qt.txt main.cpp AUTHORS.md README.md \
 	Release.md .gitignore version/
 #EXCLUDE_PATTERNS = */something/*
 USE_MDFILE_AS_MAINPAGE = README.md
+MARKDOWN_SUPPORT = YES
+TOC_INCLUDE_HEADINGS = 99
 
 RECURSIVE = TRUE
 QT_AUTOBRIEF = YES
