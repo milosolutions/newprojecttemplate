@@ -1,4 +1,3 @@
-\anchor milodatabasenpl
 [TOC]
 
 Milo Code DB main ([online](https://qtdocs.milosolutions.com/milo-code-db/main/) | [offline](\ref milodatabasemain))
@@ -7,9 +6,28 @@ Milo Code DB main ([online](https://qtdocs.milosolutions.com/milo-code-db/main/)
 
 Minimal Qt version is Qt 5.5. Recommended: newest available
 
-## Installer
+## Starting from installer
 
-If you are installing template using Installer then you just open PROJECT_NAME.pro file and start working!
+If you are installing template project using Installer:
+1. Create new repository by going to project directory and using:
+```
+git init
+```
+2. Connect to remote repository:
+```
+git remote add origin git@gitlab.domain.com:username/repository.git
+```
+3. Open .pro file using your IDE and you can start working!
+4. Fill Release.md file with information about how to build and release a package
+   to the client.
+5. Create a wiki and maintain it.
+6. Ensure all newly added code is properly commented.
+7. Push your changes:
+```
+git add -A
+git commit -m 'first commit'
+git push -u origin master
+```
 
 ## Starting from template
 
