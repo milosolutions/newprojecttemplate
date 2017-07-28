@@ -77,7 +77,7 @@ upload_job:
     - for PACKAGE in * ; do $UPLOAD_SCRIPT -f $PACKAGE -s $SEAFILE_SERVER -r $SEAFILE_REPO_ID -t $SEAFILE_API_TOKEN; done
     - $CI_PROJECT_DIR/Milo/mscripts/mattermost-notification.sh
 
-cleanup_messengerdev:
+cleanup:
   <<: *common
   tags:
     - LinuxDesktop

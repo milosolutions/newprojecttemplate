@@ -24,7 +24,8 @@ OTHER_FILES += \
     ../README.md \
     ../Release.md \
     ../.gitignore \
-    ../license-Qt.txt
+    ../license-Qt.txt \
+	../.gitlab-ci.yml
 
 ## Put all build files into build directory
 ##  This also works with shadow building, so don't worry!
