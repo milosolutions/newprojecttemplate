@@ -2,7 +2,7 @@ CONFIG += tests
 
 TEMPLATE = subdirs
 
-SUBDIRS += src \
+SUBDIRS += template \
 
 tests {
     !android {

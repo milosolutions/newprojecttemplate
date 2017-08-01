@@ -15,9 +15,13 @@ TEMPLATE = app
 CONFIG += c++14
 TARGET = Template
 
-HEADERS += globals.h
+HEADERS += src/globals.h
 
-SOURCES += main.cpp 
+SOURCES += src/main.cpp 
+
+RESOURCES +=  \
+	qml/qml.qrc \
+	resources/resources.qrc
 
 OTHER_FILES += \
     ../template.doxyfile \

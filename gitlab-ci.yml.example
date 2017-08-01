@@ -49,8 +49,7 @@ android_build:
     - make -j3
 	- make install INSTALL_ROOT=$CI_PROJECT_DIR/android-build
     - cd $CI_PROJECT_DIR
-	- $QT_PATH_ANDROID/bin/androiddeployqt --output android-build --input src/android-libluma-coffee-demo.so-deployment-settings.json --android-platform $ANDROID_TARGET_PLATFORM --gradle
-    - $QT_PATH_ANDROID/bin/androiddeployqt --output android-build --input android-$CI_PROJECT_NAME.so-deployment-settings.json --android-platform $ANDROID_TARGET_PLATFORM --qml-imports-path somePath --gradle
+    - $QT_PATH_ANDROID/bin/androiddeployqt --output android-build --input android-lib$CI_PROJECT_NAME.so-deployment-settings.json --android-platform $ANDROID_TARGET_PLATFORM --gradle
     - cp -f android-build/build/outputs/apk/android-build-release.apk $OUT_PACKAGES_DIR/$PACKAGE_NAME
 
 # Linux
@@ -60,7 +59,7 @@ linux_build:
     - LinuxDesktop
   stage: build
   variables:
-    QT_PATH: "/home/gitlab-runner/Qt/5.8/gcc_64/"
+    QT_PATH: "/home/tools/Qt/5.8/gcc_64/"
   script:
     - cd $CI_PROJECT_DIR
     - $QT_PATH/bin/qmake
