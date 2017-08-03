@@ -27,3 +27,8 @@ Thumbs.db
 *.kate-swp
 *.doxytag
 doc/html/
+
+.git.*
+.gitignore.*
+.gitlab-ci.yml.*
+*.doxytag.*
