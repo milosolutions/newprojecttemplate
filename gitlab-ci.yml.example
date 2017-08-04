@@ -1,8 +1,9 @@
+
 stages:
-  - test
-  - build
-  - upload
-  - cleanup
+- test
+- build
+- upload
+- cleanup
 
 #Global variables
 variables:
@@ -25,10 +26,10 @@ variables:
 unit_tests:
   <<: *common
   tags:
-    - LinuxDesktop
+    - LinuxServer
   stage: test
   variables:
-    QT_PATH: "/home/tools/Qt-OpenSource/5.9.1/gcc_64"
+    QT_PATH: "/home/tools/Qt-OpenSource/5.9/gcc_64"
   script:
     - cd $CI_PROJECT_DIR
     - $QT_PATH/bin/qmake
@@ -47,7 +48,7 @@ android_build:
     - cd $CI_PROJECT_DIR
     - $QT_PATH_ANDROID/bin/qmake
     - make -j3
-	- make install INSTALL_ROOT=$CI_PROJECT_DIR/android-build
+    - make install INSTALL_ROOT=$CI_PROJECT_DIR/android-build
     - cd $CI_PROJECT_DIR
     - $QT_PATH_ANDROID/bin/androiddeployqt --output android-build --input android-lib$CI_PROJECT_NAME.so-deployment-settings.json --android-platform $ANDROID_TARGET_PLATFORM --gradle
     - cp -f android-build/build/outputs/apk/android-build-release.apk $OUT_PACKAGES_DIR/$PACKAGE_NAME
@@ -56,7 +57,7 @@ android_build:
 linux_build:
   <<: *common
   tags:
-    - LinuxDesktop
+    - LinuxServer
   stage: build
   variables:
     QT_PATH: "/home/tools/Qt/5.8/gcc_64/"
@@ -64,7 +65,7 @@ linux_build:
     - cd $CI_PROJECT_DIR
     - $QT_PATH/bin/qmake
     - make -j3
-	- make install INSTALL_ROOT=$CI_PROJECT_DIR/build
+    - make install INSTALL_ROOT=$CI_PROJECT_DIR/build
 
 # Windows
 windows_build:
@@ -73,25 +74,25 @@ windows_build:
     - WindowsDesktop
   stage: build
   variables:
-    QT_PATH: "C:\Tools\Qt-OpenSource\5.9.1\mingw53_32"
-	MAKE_PATH: "C:\Tools\Qt-OpenSource\Tools\mingw530_32\bin\mingw32_make"
+    QT_PATH: C:\Tools\Qt-OpenSource\5.9.1\mingw53_32
+    MAKE_PATH: C:\Tools\Qt-OpenSource\Tools\mingw530_32\bin\mingw32_make
   script:
     - cd $CI_PROJECT_DIR
-    - $QT_PATH/bin/qmake
+    - $QT_PATH\bin\qmake
     - $MAKE_PATH
-	- $MAKE_PATH install
-	
+    - $MAKE_PATH install
+    
 #macos_build:
 #  TODO
 
 upload_job:
   <<: *common
   tags:
-    - LinuxDesktop
+    - LinuxServer
   stage: upload
   when: on_success
   variables:
-    UPLOAD_SCRIPT: "$CI_PROJECT_DIR/milo/mscripts/upload_to_seafile.sh"
+    UPLOAD_SCRIPT: "$CI_PROJECT_DIR/milo/mscripts/seafile/upload_to_seafile.sh"
   script:
     - export BUILD_TIMESTAMP=`date +%Y-%m-%d`
     - cd $OUT_PACKAGES_DIR
@@ -104,7 +105,7 @@ upload_job:
 cleanup:
   <<: *common
   tags:
-    - LinuxDesktop
+    - LinuxServer
     - LinuxAndroid
     - WindowsDesktop
     - macOS
