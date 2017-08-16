@@ -27,3 +27,5 @@ Thumbs.db
 *.kate-swp
 *.doxytag
 doc/html/
+__pycache__/
+mconfig.py
