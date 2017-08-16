@@ -32,3 +32,6 @@ doc/html/
 .gitignore.*
 .gitlab-ci.yml.*
 *.doxytag.*
+
+__pycache__/
+mconfig.py
