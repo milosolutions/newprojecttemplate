@@ -20,8 +20,8 @@ HEADERS += src/globals.h
 SOURCES += src/main.cpp 
 
 RESOURCES +=  \
-	qml/qml.qrc \
-	resources/resources.qrc
+    qml/qml.qrc \
+    resources/resources.qrc
 
 OTHER_FILES += \
     ../template.doxyfile \
@@ -29,7 +29,7 @@ OTHER_FILES += \
     ../Release.md \
     ../.gitignore \
     ../license-Qt.txt \
-	../.gitlab-ci.yml
+    ../.gitlab-ci.yml
 
 ## Put all build files into build directory
 ##  This also works with shadow building, so don't worry!
