@@ -1,4 +1,5 @@
-Code in "version" folder (advance versioning support) has been prepared by Maksym
-Telychko.
+Milo Code Database has been written by Maksym Telychko,
+Aleksey Lysenko, Jakub Motyczko, Grzegorz Prylewski, Emil Sawicki,
+and Tomasz Siekierda.
 
-The rest was written by Tomasz Siekierda.
+Feel free to edit/ remove this file.

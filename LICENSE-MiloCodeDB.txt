@@ -1,5 +1,5 @@
 Milo Code Database license
-Version 1, August 2016
+Version 1.1, August 2017
 
 Copyright (C) 2017 Milo Solutions
 Contact: https://www.milosolutions.com
