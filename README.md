@@ -2,6 +2,8 @@
 
 Milo Code DB main ([online](https://docs.milosolutions.com/milo-code-db/main/) | [offline](\ref milodatabasemain))
 
+[Source code](https://github.com/milosolutions/newprojecttemplate)
+
 # Intro
 
 Minimal Qt version is Qt 5.5. Recommended: newest available.
