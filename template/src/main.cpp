@@ -29,8 +29,6 @@ SOFTWARE.
 #include <QCoreApplication>
 #include <QLoggingCategory>
 
-#include "globals.h"
-
 // Prepare logging categories. Modify these to your needs
 //Q_DECLARE_LOGGING_CATEGORY(core) // already declared in MLog header
 Q_LOGGING_CATEGORY(coreMain, "core.main")
@@ -48,12 +46,12 @@ int main(int argc, char *argv[]) {
     app.setOrganizationDomain("milosolutions.com");
     app.setApplicationName("Template");
     //logger()->enableLogToFile(app.applicationName());
-    qCInfo(coreMain) << "Application data set."
-                 << "\n\tName:" << app.applicationName()
-                 << "\n\tOrganisation:" << app.organizationName()
-                 << "\n\tDomain:" << app.organizationDomain()
-                 << "\n\tVersion:" << app.applicationVersion()
-                 << "\n\tSHA:" << GIT_COMMIT_ID;
+    qCInfo(coreMain) << "\nName:" << app.applicationName()
+                 << "\nOrganisation:" << app.organizationName()
+                 << "\nDomain:" << app.organizationDomain()
+                 << "\nVersion:" << app.applicationVersion()
+                 << "\nSHA:" << GitCommit
+                 << "\nBuild date:" << BuildDate;
 
     return app.exec();
 }

@@ -2,13 +2,20 @@ CONFIG += tests
 
 TEMPLATE = subdirs
 
-SUBDIRS += template \
+docs {
+    message("Updating doxygen file. No compilation will be performed!")
+    doxy.input = $$PWD/template.doxyfile.in
+    doxy.output = $$PWD/template.doxyfile
+    QMAKE_SUBSTITUTES += doxy
+} else {
+    SUBDIRS += template \
 
-tests {
-    !android {
-        CONFIG(debug, debug|release) {
-            message("Running test suite")
-            SUBDIRS += tests \
+    tests {
+        !android {
+            CONFIG(debug, debug|release) {
+                message("Running test suite")
+                SUBDIRS += tests \
+            }
         }
     }
 }

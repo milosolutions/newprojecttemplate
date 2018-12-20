@@ -5,6 +5,8 @@
 
 QT = core
 
+include(../version.pri)
+
 # Warning! QStringBuilder can crash your app! See last point here:
 # https://www.kdab.com/uncovering-32-qt-best-practices-compile-time-clazy/
 # !!!
@@ -13,7 +15,7 @@ QMAKE_CXXFLAGS += -Werror
 
 TEMPLATE = app
 CONFIG += c++14
-TARGET = Template
+TARGET = template
 
 HEADERS += src/globals.h
 
