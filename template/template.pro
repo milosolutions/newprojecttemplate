@@ -17,7 +17,7 @@ TEMPLATE = app
 CONFIG += c++14
 TARGET = template
 
-HEADERS += src/globals.h
+HEADERS +=
 
 SOURCES += src/main.cpp 
 
