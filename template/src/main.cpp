@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
     //MiloLog::instance();
     // Set up basic application data. Modify this to your needs
     QCoreApplication app(argc, argv);
-    app.setApplicationVersion(APP_VERSION);
+    app.setApplicationVersion(AppVersion);
     app.setOrganizationName("Milo Solutions");
     app.setOrganizationDomain("milosolutions.com");
     app.setApplicationName("Template");
